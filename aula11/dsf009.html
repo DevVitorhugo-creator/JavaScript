@@ -16,9 +16,11 @@
         function Registro() {
             var país = document.getElementById('txtpaís')
             var res = document.getElementById('res')
-            res.innerHTML = `<p>O seu país é ${país}</p>`
-            if (país == 'Brasil') {
+            res.innerHTML = `<p>O seu país é ${país.value}</p>`
+            if (país.value == 'Brasil') {
                 res.innerHTML += '<p>Você é brasileiro</p>'
+            } else {
+                res.innerHTML += '<p>Você é estrangeiro</p>'
             }
         }
     </script>
