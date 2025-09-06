@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Seu País</title>
+</head>
+<body>
+    <h1>Qual é o seu País?</h1>
+    Seu País: <input type="text" name="txtpaís" id="txtpaís">
+    <input type="button" value="Registrar" onclick="Registro()">
+    <div id="res">
+
+    </div>
+    <script>
+        function Registro() {
+            var país = document.getElementById('txtpaís')
+            var res = document.getElementById('res')
+            res.innerHTML = `<p>O seu país é ${país}</p>`
+            if (país == 'Brasil') {
+                res.innerHTML += '<p>Você é brasileiro</p>'
+            }
+        }
+    </script>
+</body>
+</html>
